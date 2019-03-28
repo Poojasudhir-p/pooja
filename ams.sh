@@ -1,16 +1,20 @@
-echo ”enter the number”
+echo "Enter the number"
 read n
-q=$n
-a=0
-while [ $q – gt 0 ]
+t=$n
+s=0
+b=0
+c=10
+while [ $n -gt $b ]
 do
-r= `expr $q % 10 `
-q= `expr $q / 10 `
-a=`expr $a + $r /* $r /*$r `
+r=`expr $n % $c`
+i=`expr $r \* $r \* $r`
+s=`expr $s + $i`
+n=`expr $n / $c`
 done
-if [ $a=$n ]
+echo $s
+if [ $s -eq $t ]
 then
-echo “the number $n is armstrong number”
+echo "Amstrong number"
 else
-echo “the number $n is not armstrong number”
+echo "Not an Armstrong number"
 fi
